@@ -9,7 +9,7 @@ using namespace std;
 
 class ATarget;
 
-class Aspell {
+class ASpell {
     private:
         string _name;
         string _effects;
