@@ -7,6 +7,13 @@ Warlock::Warlock(string name, string title) : _name(name), _title(title)
 
 Warlock::~Warlock()
 {
+    map<string, ASpell *>::iterator it = spellBook.begin();
+    map<string, ASpell *>::iterator end = spellBook.end();
+    while (it != end)
+    {
+        delete it->second;
+        ++it;
+    }
     cout << _name << ": My job here is done!" << endl;
 }
 
